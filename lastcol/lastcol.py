@@ -15,8 +15,7 @@ class LastFMImage:
         self.url = "http://ws.audioscrobbler.com/2.0/"
         self.method = "user.gettopartists"
         self.user = username or "alairock"
-        self.api_key = os.getenv('LASTFM_KEY',
-                                 '301a3a6d4301644d5a078e7f1fac0e78')
+        self.api_key = os.getenv('LASTFM_KEY', '')
         self.limit = int(col) * int(row)
         self.period = '3month'
         self.cache_path = '/tmp/lastcol/demo'
